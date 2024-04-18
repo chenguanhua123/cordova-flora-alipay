@@ -1,5 +1,5 @@
 {
-  "name": "ccordova-flora-alipay",
+  "name": "cordova-flora-alipay",
   "version": "2.0.0",
   "description": "a cordova plugin, a JS version of Alipay SDK(20190718211148)",
   "cordova": {

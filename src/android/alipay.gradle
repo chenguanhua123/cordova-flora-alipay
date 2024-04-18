@@ -6,7 +6,5 @@ repositories{
 }
 
 dependencies {
-    // 把原来的 compile 改成 implementation
-    // implementation (name: 'alipaySdk-15.6.5-20190718211148', ext: 'aar')
     api 'com.alipay.sdk:alipaysdk-android:+@aar'
 }
