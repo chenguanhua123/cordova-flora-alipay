@@ -1,9 +1,26 @@
-# cordova-plugin-alipay-v2（更新至alipaySdk-15.6.5-20190718211148.aar）
-支付宝的cordova插件其实在github上已经有很多了，但是都已经是以前的版本了。
+# cordova-flora-alipay（更新至alipaySdk 15.8+）
+该插件是有cordova-plugin-alipay-v2 (https://github.com/hhjjj1010/cordova-plugin-alipay-v2) 插件改版过来的 支付宝的cordova插件其实在github上已经有很多了，但是都已经是以前的版本了。
 在2016年11月的时候支付宝进行了一次更新，支付宝的SDK升级到2.0版本。
 以前在app中使用支付宝进行支付叫做移动支付，11月之后更名为APP支付。
 
 __本插件仅支持《APP支付》，不支持移动支付__
+
+## 2023-04-18 更新日志
+- Android SDK 更新了引入 arr 包的方式了, 将 
+``` js
+alipaySdk-15.6.5-20190718211148.aar 
+```
+变更为 
+```js
+api 'com.alipay.sdk:alipaysdk-android:+@aar' 
+```
+- Android SDK 支付接口调用必须异步调用, 在支付接口里加上下面一段代码:
+```js
+Thread payThread = new Thread(payRunnable);
+payThread.start(); 
+``` 
+ 如果不异步调用在APP内会用H5的支付方式,就 需要填写支付宝账号和短信验证码, 最后才到支付异步。
+- 针对Android SDK 具体的变更可以查看支付宝开发平台的API,https://opendocs.alipay.com/open/204/105296?pathHash=22ed0058
 
 ## 2019-07-31 更新日志
 - Android SDK 更新至alipaySdk-15.6.5-20190718211148.aar。
@@ -69,7 +86,7 @@ cordova plugin add cordova-plugin-alipay-v2 --variable APP_ID=your AppId
 ```
 git安装
 ``` shell
-cordova plugin add https://github.com/hhjjj1010/cordova-plugin-alipay-v2.git --variable APP_ID=your AppId
+cordova plugin add https://github.com/chenguanhua123/cordova-flora-alipay--variable APP_ID=your AppId
 ```
 
 ## 本地安装
