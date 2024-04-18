@@ -1,0 +1,30 @@
+{
+  "name": "cordova-flora-alipay",
+  "version": "2.0.0",
+  "description": "a cordova plugin, a JS version of Alipay SDK(20190718211148)",
+  "cordova": {
+    "id": "cordova-plugin-alipay-flora",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "alipay",
+    "cordova-plugin-alipay",
+    "cordova-plugin-alipay-flora"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenguanhua123/ordova-flora-alipay.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chenguanhua123/ordova-flora-alipay/issues"
+  },
+  "homepage": "https://github.com/hhjjj1010/cordova-plugin-alipay-v2#readme",
+  "author": "Flora",
+  "license": "ISC"
+}
