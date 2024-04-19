@@ -65,9 +65,6 @@
         <source-file src="src/ios/alipay.m"/>
        
         <podspec>
-            <config>
-                <source url="https://github.com/CocoaPods/Specs.git"/>
-            </config>
             <pods use-frameworks="true">
                 <pod name="AlipaySDK-iOS"/>
             </pods>
