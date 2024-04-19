@@ -6,6 +6,7 @@
 __本插件仅支持《APP支付》，不支持移动支付__
 
 ## 2023-04-18 更新日志
+- 更新 IOS SDK 为最新版本。
 - Android SDK 更新了引入 arr 包的方式了, 将 
 ``` js
 alipaySdk-15.6.5-20190718211148.aar 
@@ -64,8 +65,6 @@ cordova.plugins.alipay.payment(payInfo, (e) => {
 
 # 注意
 插件从v1.0.0开始支持cordova-android 7.0.0，因为cordova-android 7.0.0更改了android项目的文件目录，所以不再兼容以前的老版本，升级前请务必注意。
-
-如果项目是之前的cordova-android老版本，请安装插件以前的老版本，在安装的时候带上版本号即可,cordova-plugin-alipay-v2@0.0.4。
 
 #功能说明
 1. 根据支付宝的说明文档的建议，为保证安全，签名都放到后端去做，前端只需要接收后台传入签名字符串，使用该插件调用支付宝SDK完成支付
