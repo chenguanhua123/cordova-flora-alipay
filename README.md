@@ -68,7 +68,7 @@ cordova.plugins.alipay.payment(payInfo, (e) => {
 
 #功能说明
 1. 根据支付宝的说明文档的建议，为保证安全，签名都放到后端去做，前端只需要接收后台传入签名字符串，使用该插件调用支付宝SDK完成支付
-2. APP_ID：对应开放平台中应用的APPID，主要用于iOS平台Xcode构建URL Schemes
+2. ALIPAY_IOS_APP_ID：对应开放平台中应用的APPID，主要用于iOS平台Xcode构建URL Schemes
 
 ***
 # 支持平台
@@ -81,17 +81,17 @@ cordova.plugins.alipay.payment(payInfo, (e) => {
 ## 在线安装
 npm安装
 ```shell
-cordova plugin add cordova-plugin-alipay-v2 --variable APP_ID=your AppId
+cordova plugin add cordova-plugin-alipay-v2 --variable ALIPAY_IOS_APP_ID=your AppId
 ```
 git安装
 ``` shell
-cordova plugin add https://github.com/chenguanhua123/cordova-flora-alipay--variable APP_ID=your AppId
+cordova plugin add https://github.com/chenguanhua123/cordova-flora-alipay--variable ALIPAY_IOS_APP_ID=your AppId
 ```
 
 ## 本地安装
 下载插件到本地
 ``` shell
-cordova plugin add /your/local/path --variable APP_ID=your AppId
+cordova plugin add /your/local/path --variable ALIPAY_IOS_APP_ID=your AppId
 ```
 
 ***
@@ -100,7 +100,7 @@ cordova plugin add /your/local/path --variable APP_ID=your AppId
 
 ### 带有签名信息的订单信息示例
 ``` js
-var payInfo = "app_id=2015052600090779&biz_content=%7B%22timeout_express%22%3A%2230m%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22total_amount%22%3A%220.01%22%2C%22subject%22%3A%221%22%2C%22body%22%3A%22%E6%88%91%E6%98%AF%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%22%2C%22out_trade_no%22%3A%22IQJZSRC1YMQB5HU%22%7D&charset=utf-8&format=json&method=alipay.trade.app.pay&notify_url=http%3A%2F%2Fdomain.merchant.com%2Fpayment_notify&sign_type=RSA2&timestamp=2016-08-25%2020%3A26%3A31&version=1.0&sign=cYmuUnKi5QdBsoZEAbMXVMmRWjsuUj%2By48A2DvWAVVBuYkiBj13CFDHu2vZQvmOfkjE0YqCUQE04kqm9Xg3tIX8tPeIGIFtsIyp%2FM45w1ZsDOiduBbduGfRo1XRsvAyVAv2hCrBLLrDI5Vi7uZZ77Lo5J0PpUUWwyQGt0M4cj8g%3D";
+var payInfo = "ALIPAY_IOS_APP_ID=2015052600090779&biz_content=%7B%22timeout_express%22%3A%2230m%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22total_amount%22%3A%220.01%22%2C%22subject%22%3A%221%22%2C%22body%22%3A%22%E6%88%91%E6%98%AF%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%22%2C%22out_trade_no%22%3A%22IQJZSRC1YMQB5HU%22%7D&charset=utf-8&format=json&method=alipay.trade.app.pay&notify_url=http%3A%2F%2Fdomain.merchant.com%2Fpayment_notify&sign_type=RSA2&timestamp=2016-08-25%2020%3A26%3A31&version=1.0&sign=cYmuUnKi5QdBsoZEAbMXVMmRWjsuUj%2By48A2DvWAVVBuYkiBj13CFDHu2vZQvmOfkjE0YqCUQE04kqm9Xg3tIX8tPeIGIFtsIyp%2FM45w1ZsDOiduBbduGfRo1XRsvAyVAv2hCrBLLrDI5Vi7uZZ77Lo5J0PpUUWwyQGt0M4cj8g%3D";
 ```
 
 ## 第二步：调用支付插件

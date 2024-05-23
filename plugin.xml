@@ -2,7 +2,7 @@
 <plugin id="cordova-flora-alipay" version="2.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>alipay</name>
-    <preference name="APP_ID"/>
+    <preference name="ALIPAY_IOS_APP_ID"/>
     <js-module name="alipay" src="www/alipay.js">
         <clobbers target="cordova.plugins.alipay"/>
     </js-module>
@@ -30,7 +30,7 @@
             <feature name="alipay">
                 <param name="ios-package" value="alipay"/>
             </feature>
-            <preference name="alipayid" value="$APP_ID"/>
+            <preference name="alipayid" value="$ALIPAY_IOS_APP_ID"/>
         </config-file>
         <config-file target="*-Info.plist" parent="CFBundleURLTypes">
             <array>
@@ -39,7 +39,7 @@
                     <string>alipay</string>
                     <key>CFBundleURLSchemes</key>
                     <array>
-                        <string>ali$APP_ID</string>
+                        <string>ali$ALIPAY_IOS_APP_ID</string>
                     </array>
                 </dict>
             </array>
